@@ -1,6 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import {
   Truck,
+  TrainFront,
   PackageSearch,
   Shirt,
   Factory,
@@ -25,7 +26,7 @@ export const siteConfig = {
   name: "Saibaba Transport",
   tagline: "Moving Yourself for Success",
   description:
-    "Pan-India transportation and logistics partner for textile, industrial and commercial goods - full truck load, part truck load and dedicated fleet solutions.",
+    "Pan-India multimodal transportation and logistics partner for textile, industrial and commercial goods - road (full truck load, part truck load) and rail freight, backed by dedicated fleet solutions.",
   phone: "+91 90334 70451",
   phoneHref: "tel:+919033470451",
   supportPhone: "+91 90334 70451",
@@ -68,6 +69,15 @@ export const services: Service[] = [
       "For shipments that don't need a full vehicle, our PTL network consolidates multiple consignments on shared routes - giving smaller businesses access to pan-India reach without paying for unused capacity.",
     icon: PackageSearch,
     points: ["Pay only for the space you use", "Wide network of shared routes", "Suited for regular small dispatches", "Careful load consolidation"],
+  },
+  {
+    slug: "rail-transportation",
+    name: "Rail / Train Transportation",
+    short: "Multimodal rail freight for long-haul, high-volume consignments.",
+    description:
+      "Alongside our road fleet, we coordinate rail freight movement for long-haul, high-volume consignments - a cost-efficient, multimodal option for bulk textile, industrial and commercial cargo over longer distances, with road transport handling first- and last-mile pickup and delivery.",
+    icon: TrainFront,
+    points: ["Cost-efficient for long-haul bulk cargo", "Road pickup & delivery on both ends", "Suited to high-volume consignments", "Multimodal road + rail coordination"],
   },
   {
     slug: "textile-transportation",
@@ -277,7 +287,13 @@ export const faqs: FAQ[] = [
     category: "Services",
     question: "What kind of transportation services does Saibaba Transport offer?",
     answer:
-      "We offer Full Truck Load (FTL), Part Truck Load (PTL), textile transportation, industrial and commercial transportation, dedicated and contract transportation, third-party network transportation, and customized logistics solutions across India.",
+      "We offer Full Truck Load (FTL), Part Truck Load (PTL), rail/train freight transportation, textile transportation, industrial and commercial transportation, dedicated and contract transportation, third-party network transportation, and customized logistics solutions across India.",
+  },
+  {
+    category: "Services",
+    question: "Do you offer rail/train transportation as well as trucking?",
+    answer:
+      "Yes. Alongside our road fleet, we coordinate rail freight movement for long-haul, high-volume consignments, with road transport handling pickup and delivery on both ends - a cost-efficient multimodal option for bulk cargo over longer distances.",
   },
   {
     category: "Services",
@@ -333,7 +349,7 @@ export const stats = [
 export const whyChooseUs = [
   { title: "Pan-India Network", description: "Branches and partner transporters connecting major business hubs.", icon: MapPinned },
   { title: "Textile-First Expertise", description: "Deep experience in bulk textile transportation since our founding.", icon: Shirt },
-  { title: "Own Fleet + Partner Network", description: "Flexible capacity combining company-owned trucks and vetted partners.", icon: Truck },
+  { title: "Road + Rail Multimodal Reach", description: "Flexible capacity combining company-owned trucks, rail freight tie-ups and vetted partners.", icon: TrainFront },
   { title: "Reliable, On-Time Delivery", description: "Coordinated dispatch and tracking discipline across every branch.", icon: Clock },
   { title: "Transparent Dealing", description: "Clear documentation, honest estimates and accountable partners.", icon: ShieldCheck },
   { title: "Dedicated Support Team", description: "A responsive team across branches for booking and support queries.", icon: Users },
@@ -437,6 +453,7 @@ export const navLinks = [
     href: "/services",
     children: [
       { label: "All Services", href: "/services" },
+      { label: "Rail / Train Transportation", href: "/services#rail-transportation" },
       { label: "Textile Transportation", href: "/services/textile-transportation" },
       { label: "Fleet & Network", href: "/fleet" },
       { label: "Gallery", href: "/gallery" },

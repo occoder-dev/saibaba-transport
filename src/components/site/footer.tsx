@@ -9,6 +9,7 @@ import { FacebookIcon, InstagramIcon, LinkedinIcon } from "@/components/site/soc
 const serviceLinks = [
   { label: "Full Truck Load", href: "/services#full-truck-load" },
   { label: "Part Truck Load", href: "/services#part-truck-load" },
+  { label: "Rail / Train Transportation", href: "/services#rail-transportation" },
   { label: "Textile Transportation", href: "/services/textile-transportation" },
   { label: "Industrial Transportation", href: "/services#industrial-transportation" },
   { label: "Pan-India Transportation", href: "/services#pan-india-transportation" },

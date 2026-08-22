@@ -136,18 +136,20 @@ export default function AboutPage() {
               Reliable movement, backed by real transportation experience
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              Saibaba Transport is a pan-India transportation and logistics
-              company built around one idea: businesses need a transport
-              partner they can rely on without having to double-check every
-              shipment. What began as a dedicated textile transportation
-              operation has grown into a broader network serving
-              manufacturing, retail, FMCG, e-commerce, industrial, automotive,
-              construction and pharmaceutical businesses.
+              Saibaba Transport is a pan-India multimodal transportation and
+              logistics company built around one idea: businesses need a
+              transport partner they can rely on without having to
+              double-check every shipment. What began as a dedicated textile
+              transportation operation has grown into a broader network -
+              moving cargo by road and rail - serving manufacturing, retail,
+              FMCG, e-commerce, industrial, automotive, construction and
+              pharmaceutical businesses.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              We operate through a combination of company-owned vehicles and a
-              carefully vetted network of third-party transporters - giving
-              clients flexible capacity and wider route coverage while keeping
+              We operate through a combination of company-owned vehicles,
+              rail freight tie-ups and a carefully vetted network of
+              third-party transporters - giving clients flexible capacity and
+              wider route coverage across both road and rail while keeping
               accountability centralized with our team.
             </p>
           </Reveal>
@@ -218,10 +220,11 @@ export default function AboutPage() {
           <div className="grid gap-10 md:grid-cols-3">
             <Reveal className="flex flex-col items-start gap-3">
               <Truck className="size-8 text-primary" />
-              <h3 className="text-lg font-semibold">Own Fleet &amp; Network</h3>
+              <h3 className="text-lg font-semibold">Own Fleet, Rail &amp; Network</h3>
               <p className="text-sm leading-relaxed text-white/60">
-                Company-owned vehicles combined with a growing partner
-                network for flexible, scalable capacity.
+                Company-owned vehicles, rail freight tie-ups for long-haul
+                bulk cargo, and a growing partner network for flexible,
+                scalable capacity.
               </p>
             </Reveal>
             <Reveal delay={0.1} className="flex flex-col items-start gap-3">

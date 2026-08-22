@@ -36,6 +36,16 @@ const serviceSeed = [
     sortOrder: 1,
   },
   {
+    slug: "rail-transportation",
+    name: "Rail / Train Transportation",
+    short: "Multimodal rail freight for long-haul, high-volume consignments.",
+    description:
+      "Alongside our road fleet, we coordinate rail freight movement for long-haul, high-volume consignments - a cost-efficient, multimodal option for bulk textile, industrial and commercial cargo over longer distances, with road transport handling first- and last-mile pickup and delivery.",
+    icon: "TrainFront",
+    points: ["Cost-efficient for long-haul bulk cargo", "Road pickup & delivery on both ends", "Suited to high-volume consignments", "Multimodal road + rail coordination"],
+    sortOrder: 2,
+  },
+  {
     slug: "textile-transportation",
     name: "Textile Transportation",
     short: "Our core specialty - factory-to-destination textile logistics.",
@@ -43,7 +53,7 @@ const serviceSeed = [
       "Textile transportation is where Saibaba Transport began, and it remains our core strength. From grey fabric to finished garments, we handle bulk textile movement between mills, processing units, wholesale markets and retail destinations across India.",
     icon: "Shirt",
     points: ["Deep textile-corridor experience", "Bulk & bale-safe handling", "Mill-to-market coverage", "Trusted by textile traders for years"],
-    sortOrder: 2,
+    sortOrder: 3,
   },
   {
     slug: "industrial-transportation",
@@ -53,7 +63,7 @@ const serviceSeed = [
       "We support manufacturers with the movement of raw materials, semi-finished goods and machinery between plants, warehouses and distribution points, with vehicle types matched to load and handling requirements.",
     icon: "Factory",
     points: ["Matched vehicle types for heavy loads", "Plant-to-warehouse movement", "Scheduled & on-demand dispatch", "Careful loading/unloading coordination"],
-    sortOrder: 3,
+    sortOrder: 4,
   },
   {
     slug: "commercial-transportation",
@@ -63,7 +73,7 @@ const serviceSeed = [
       "General commercial cargo - retail stock, packaged goods, e-commerce bulk shipments - moved reliably across our branch and partner network with transparent tracking of dispatch status.",
     icon: "Building2",
     points: ["Flexible for varied commercial cargo", "Suited to retail & wholesale supply chains", "Branch-supported dispatch", "Business-friendly documentation"],
-    sortOrder: 4,
+    sortOrder: 5,
   },
   {
     slug: "dedicated-transportation",
@@ -73,7 +83,7 @@ const serviceSeed = [
       "For businesses with predictable, recurring dispatch volumes, we can dedicate specific vehicles and routes - improving reliability, planning and cost predictability for long-term relationships.",
     icon: "Route",
     points: ["Fixed vehicle allocation", "Predictable recurring schedules", "Priority handling", "Long-term contract friendly"],
-    sortOrder: 5,
+    sortOrder: 6,
   },
   {
     slug: "contract-transportation",
@@ -83,7 +93,7 @@ const serviceSeed = [
       "We work with enterprise clients on structured transportation contracts covering defined routes, volumes and service levels - supported by our own fleet and vetted third-party transporter network.",
     icon: "FileSignature",
     points: ["Custom SLAs & reporting", "Combined own-fleet + partner capacity", "Volume-based commercial terms", "Dedicated account coordination"],
-    sortOrder: 6,
+    sortOrder: 7,
   },
   {
     slug: "third-party-transportation",
@@ -93,7 +103,7 @@ const serviceSeed = [
       "Beyond our own fleet, we coordinate a network of verified third-party transporters to extend coverage into additional routes and vehicle types - while managing quality and accountability centrally.",
     icon: "Network",
     points: ["Verified partner transporters", "Extended route & vehicle coverage", "Centrally coordinated accountability", "Scales with demand spikes"],
-    sortOrder: 7,
+    sortOrder: 8,
   },
   {
     slug: "pan-india-transportation",
@@ -103,7 +113,7 @@ const serviceSeed = [
       "Our branch network and transporter partnerships are built to connect India's major manufacturing, trading and consumption hubs - giving businesses one point of contact for multi-state movement.",
     icon: "MapPinned",
     points: ["Multi-state route coverage", "Single point of coordination", "Branch-backed local support", "Growing network of locations"],
-    sortOrder: 8,
+    sortOrder: 9,
   },
   {
     slug: "customized-logistics",
@@ -113,7 +123,7 @@ const serviceSeed = [
       "Every business ships differently. We work with clients to design a transportation plan around their specific material type, frequency, budget and delivery expectations.",
     icon: "Sparkles",
     points: ["Needs-based route planning", "Flexible commercial structures", "Scalable as your business grows", "Consultative onboarding"],
-    sortOrder: 9,
+    sortOrder: 10,
   },
 ];
 

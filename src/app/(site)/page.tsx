@@ -67,7 +67,7 @@ export default async function Home() {
             <SectionHeading
               eyebrow="What We Do"
               title="Transportation services built for every load"
-              description="From dedicated full truck loads to shared part-load shipments, our services cover the full range of business transportation needs."
+              description="From dedicated full truck loads and shared part-load shipments to rail freight movement, our services cover the full range of business transportation needs - by road and rail."
             />
             <Reveal>
               <Button variant="outline" asChild className="shrink-0">
@@ -183,15 +183,16 @@ export default async function Home() {
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-primary">
-              <Truck className="size-3.5" /> Fleet &amp; Network
+              <Truck className="size-3.5" /> Road &amp; Rail Network
             </span>
             <h2 className="mt-5 font-display text-3xl leading-tight tracking-wide sm:text-4xl">
-              Own fleet, extended by a trusted transporter network
+              Own fleet and rail tie-ups, extended by a trusted network
             </h2>
             <p className="mt-5 text-base leading-relaxed text-white/65">
-              We combine company-owned trucks with a growing network of verified
-              third-party transporters - giving businesses flexible capacity and
-              wider route coverage without compromising on accountability.
+              We combine company-owned trucks and rail freight tie-ups with a
+              growing network of verified third-party transporters - giving
+              businesses flexible road and rail capacity, wider route coverage
+              and no compromise on accountability.
             </p>
             <Button variant="secondary" className="mt-8 text-primary" asChild>
               <Link href="/fleet">
@@ -224,7 +225,7 @@ export default async function Home() {
               <SectionHeading
                 eyebrow="Gallery"
                 title="A look at our fleet, loads & operations"
-                description="Real photos of Saibaba Transport trucks, ongoing loads and warehouse operations from across our branch network."
+                description="Real photos of Saibaba Transport's fleet, ongoing loads and warehouse operations from across our branch network."
               />
               <Reveal>
                 <Button variant="outline" asChild className="shrink-0">

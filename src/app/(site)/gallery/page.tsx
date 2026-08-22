@@ -18,7 +18,7 @@ export default async function GalleryPage() {
       <PageHero
         eyebrow="Gallery"
         title="Our fleet, loads & operations"
-        description="A look at our trucks, ongoing loads and warehouse operations from across the Saibaba Transport network."
+        description="A look at our fleet, ongoing loads and warehouse operations from across the Saibaba Transport network."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Gallery" }]}
       />
 

@@ -26,10 +26,12 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Saibaba Transport is a pan-India transportation and logistics company specializing in textile, industrial and commercial goods movement - Full Truck Load, Part Truck Load and dedicated fleet solutions.",
+    "Saibaba Transport is a pan-India multimodal transportation and logistics company specializing in textile, industrial and commercial goods movement - road (Full Truck Load, Part Truck Load) and rail freight, plus dedicated fleet solutions.",
 
   keywords: [
     "transport company in India",
+    "rail freight transportation",
+    "train transportation services",
     "textile transport services",
     "textile transportation",
     "pan India transport service",
@@ -45,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Saibaba Transport",
     title: "Saibaba Transport | Pan-India Transportation & Logistics",
     description:
-      "Reliable pan-India transportation for textile, industrial and commercial goods.",
+      "Reliable pan-India road and rail transportation for textile, industrial and commercial goods.",
     images: [
       {
         url: "/social-preview.png",
@@ -60,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Saibaba Transport | Pan-India Transportation & Logistics",
     description:
-      "Reliable pan-India transportation for textile, industrial and commercial goods.",
+      "Reliable pan-India road and rail transportation for textile, industrial and commercial goods.",
     images: ["/social-preview.png"],
   },
 };
