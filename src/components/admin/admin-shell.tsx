@@ -50,7 +50,7 @@ function UserFooter({ name, email, role }: { name: string; email: string; role: 
 function BrandHeader() {
   return (
     <div className="flex h-16 shrink-0 items-center gap-2.5 border-b border-white/10 px-4">
-      <Image src="/logo-mark.png" alt="" width={32} height={32} className="size-8 rounded-lg bg-white/5 p-0.5" />
+      <Image src="/logo.png" alt="" width={32} height={32} className="size-8 rounded-lg bg-white p-0.5" />
       <div className="leading-tight">
         <p className="text-sm font-semibold tracking-tight text-white">Saibaba Transport</p>
         <p className="text-xs text-white/45">Admin Panel</p>

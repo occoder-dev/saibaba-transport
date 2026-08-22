@@ -21,9 +21,9 @@ export default async function AdminLoginPage({
           <Image
             src="/logo-transparent.png"
             alt="Saibaba Transport"
-            width={160}
-            height={56}
-            className="h-14 w-auto"
+            width={220}
+            height={70}
+            className="h-14 w-auto bg-white rounded-xl p-1"
             priority
           />
           <div>

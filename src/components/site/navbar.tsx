@@ -149,7 +149,7 @@ export function Navbar() {
           <SheetContent side="right" className="w-full sm:max-w-sm">
             <SheetHeader>
               <SheetTitle className="flex items-center gap-2 font-display text-xl tracking-wide">
-                <Image src="/logo-emblem.png" alt="" width={32} height={32} className="size-8" />
+                <Image src="/logo.png" alt="" width={32} height={32} className="size-8" />
                 SAIBABA TRANSPORT
               </SheetTitle>
             </SheetHeader>

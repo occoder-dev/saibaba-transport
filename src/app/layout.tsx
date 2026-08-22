@@ -18,12 +18,16 @@ const bebasNeue = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.saibabatransport.com"),
+
   title: {
     default: "Saibaba Transport | Pan-India Transportation & Logistics",
     template: "%s | Saibaba Transport",
   },
+
   description:
     "Saibaba Transport is a pan-India transportation and logistics company specializing in textile, industrial and commercial goods movement - Full Truck Load, Part Truck Load and dedicated fleet solutions.",
+
   keywords: [
     "transport company in India",
     "textile transport services",
@@ -33,6 +37,32 @@ export const metadata: Metadata = {
     "full truck load transport",
     "logistics company",
   ],
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://www.saibabatransport.com",
+    siteName: "Saibaba Transport",
+    title: "Saibaba Transport | Pan-India Transportation & Logistics",
+    description:
+      "Reliable pan-India transportation for textile, industrial and commercial goods.",
+    images: [
+      {
+        url: "/social-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Saibaba Transport - Pan-India Transportation & Logistics",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Saibaba Transport | Pan-India Transportation & Logistics",
+    description:
+      "Reliable pan-India transportation for textile, industrial and commercial goods.",
+    images: ["/social-preview.png"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
