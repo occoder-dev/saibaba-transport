@@ -1,0 +1,250 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.75rem;
+
+  /* Base surfaces */
+  --background: #ffffff;
+  --foreground: #1c1c1c;
+
+  --card: #ffffff;
+  --card-foreground: #1c1c1c;
+
+  --popover: #ffffff;
+  --popover-foreground: #1c1c1c;
+
+  /* Brand red, sampled from the Sai Baba Transport emblem */
+  --primary: #db2319;
+  --primary-foreground: #ffffff;
+
+  /* Brand gray, sampled from the truck/train silhouette */
+  --secondary: #f4f4f3;
+  --secondary-foreground: #1c1c1c;
+
+  --muted: #f4f4f3;
+  --muted-foreground: #6b6b6a;
+
+  --accent: #fdeceb;
+  --accent-foreground: #b31d15;
+
+  --destructive: #e7473c;
+  --destructive-foreground: #ffffff;
+
+  --border: #e7e5e3;
+  --input: #e7e5e3;
+  --ring: #db2319;
+
+  --chart-1: #db2319;
+  --chart-2: #82817f;
+  --chart-3: #f4a01f;
+  --chart-4: #2a9d8f;
+  --chart-5: #1c1c1c;
+
+  /* Sai Baba specific tokens */
+  --brand-red: #db2319;
+  --brand-red-dark: #a8180f;
+  --brand-red-light: #f04a3f;
+  --brand-gray: #82817f;
+  --brand-gray-dark: #4a4a49;
+  --brand-charcoal: #1c1c1c;
+  --brand-charcoal-soft: #1c1c1ccc;
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1c1c1c;
+  --sidebar-primary: #db2319;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f4f4f3;
+  --sidebar-accent-foreground: #1c1c1c;
+  --sidebar-border: #e7e5e3;
+  --sidebar-ring: #db2319;
+}
+
+.dark {
+  --background: #141414;
+  --foreground: #f4f4f3;
+
+  --card: #1c1c1c;
+  --card-foreground: #f4f4f3;
+
+  --popover: #1c1c1c;
+  --popover-foreground: #f4f4f3;
+
+  --primary: #e7473c;
+  --primary-foreground: #ffffff;
+
+  --secondary: #262626;
+  --secondary-foreground: #f4f4f3;
+
+  --muted: #262626;
+  --muted-foreground: #a3a3a1;
+
+  --accent: #2a1a19;
+  --accent-foreground: #f0958d;
+
+  --destructive: #e7473c;
+  --destructive-foreground: #ffffff;
+
+  --border: #2e2e2d;
+  --input: #2e2e2d;
+  --ring: #e7473c;
+
+  --sidebar: #1c1c1c;
+  --sidebar-foreground: #f4f4f3;
+  --sidebar-primary: #e7473c;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #f4f4f3;
+  --sidebar-border: #2e2e2d;
+  --sidebar-ring: #e7473c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-bebas);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-brand-red: var(--brand-red);
+  --color-brand-red-dark: var(--brand-red-dark);
+  --color-brand-red-light: var(--brand-red-light);
+  --color-brand-gray: var(--brand-gray);
+  --color-brand-gray-dark: var(--brand-gray-dark);
+  --color-brand-charcoal: var(--brand-charcoal);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 32s linear infinite;
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes marquee-reverse {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  ::selection {
+    background: var(--brand-red);
+    color: #fff;
+  }
+
+  /* Thin, unobtrusive scrollbars for a more polished feel in dense admin UI */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in oklab, var(--brand-gray) 45%, transparent) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: color-mix(in oklab, var(--brand-gray) 45%, transparent);
+    border-radius: 999px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), var(--font-sans);
+  }
+  .text-gradient-brand {
+    background: linear-gradient(90deg, var(--brand-red) 0%, var(--brand-red-light) 60%, #ff7a6e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, color-mix(in oklab, var(--brand-gray) 12%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--brand-gray) 12%, transparent) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .bg-dot-grid {
+    background-image: radial-gradient(color-mix(in oklab, var(--brand-gray) 22%, transparent) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+  /* Soft, wide-spread shadow for hero panels, feature cards and CTA blocks -
+     reads as "premium" without the harsh default box-shadow look. */
+  .shadow-premium {
+    box-shadow: 0 1px 2px color-mix(in oklab, var(--brand-charcoal) 6%, transparent),
+      0 16px 40px -12px color-mix(in oklab, var(--brand-charcoal) 18%, transparent);
+  }
+  .shadow-premium-lg {
+    box-shadow: 0 2px 4px color-mix(in oklab, var(--brand-charcoal) 8%, transparent),
+      0 32px 64px -16px color-mix(in oklab, var(--brand-charcoal) 24%, transparent);
+  }
+  /* Consistent hover lift used across custom (non-shadcn) card markup */
+  .card-hover {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1px 2px color-mix(in oklab, var(--brand-charcoal) 6%, transparent),
+      0 20px 48px -14px color-mix(in oklab, var(--brand-charcoal) 20%, transparent);
+  }
+}

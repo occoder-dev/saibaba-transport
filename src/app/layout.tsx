@@ -1,0 +1,47 @@
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import "./globals.css";
+
+// Self-hosted (no runtime fetch to Google Fonts required at build time).
+const manrope = localFont({
+  src: "./fonts/Manrope-Variable.ttf",
+  variable: "--font-manrope",
+  weight: "200 800",
+  display: "swap",
+});
+
+const bebasNeue = localFont({
+  src: "./fonts/BebasNeue-Regular.ttf",
+  variable: "--font-bebas",
+  weight: "400",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: "Saibaba Transport | Pan-India Transportation & Logistics",
+    template: "%s | Saibaba Transport",
+  },
+  description:
+    "Saibaba Transport is a pan-India transportation and logistics company specializing in textile, industrial and commercial goods movement - Full Truck Load, Part Truck Load and dedicated fleet solutions.",
+  keywords: [
+    "transport company in India",
+    "textile transport services",
+    "textile transportation",
+    "pan India transport service",
+    "goods transportation",
+    "full truck load transport",
+    "logistics company",
+  ],
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html
+      lang="en"
+      className={`${manrope.variable} ${bebasNeue.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
+    </html>
+  );
+}
