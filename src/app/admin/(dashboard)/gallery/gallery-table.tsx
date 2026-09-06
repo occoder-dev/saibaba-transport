@@ -9,13 +9,28 @@ import { DeleteButton } from "@/components/admin/crud/delete-button";
 import { ActiveToggle } from "@/components/admin/crud/active-toggle";
 import type { GalleryImage } from "@/db/schema";
 import { updateGalleryImageAction, deleteGalleryImageAction, toggleGalleryImageActiveAction } from "./actions";
-import { UploadImageDialog } from "./upload-dialog";
+import { UploadImageDialog, GALLERY_CATEGORIES } from "./upload-dialog";
 
-const EDIT_FIELDS: FieldConfig[] = [
-  { type: "text", name: "caption", label: "Caption" },
-  { type: "text", name: "category", label: "Category", placeholder: "Fleet" },
-  { type: "number", name: "sortOrder", label: "Sort order", placeholder: "0" },
-];
+// Same curated category list as the upload dialog. If an image's existing
+// category isn't one of the curated options (e.g. it was set before this
+// list existed, or via "Other..." at upload time), it's added in as an
+// extra option so editing never silently discards it.
+function editFieldsFor(currentCategory: string): FieldConfig[] {
+  const options = GALLERY_CATEGORIES.includes(currentCategory)
+    ? GALLERY_CATEGORIES
+    : [...GALLERY_CATEGORIES, currentCategory];
+
+  return [
+    { type: "text", name: "caption", label: "Caption" },
+    {
+      type: "select",
+      name: "category",
+      label: "Category",
+      options: options.map((cat) => ({ value: cat, label: cat })),
+    },
+    { type: "number", name: "sortOrder", label: "Sort order", placeholder: "0" },
+  ];
+}
 
 export function GalleryTable({ images }: { images: GalleryImage[] }) {
   return (
@@ -65,7 +80,7 @@ export function GalleryTable({ images }: { images: GalleryImage[] }) {
                       </Button>
                     }
                     title="Edit Image Details"
-                    fields={[{ type: "hidden", name: "id" }, ...EDIT_FIELDS]}
+                    fields={[{ type: "hidden", name: "id" }, ...editFieldsFor(image.category)]}
                     defaultValues={{ ...image, id: image.id }}
                     action={updateGalleryImageAction}
                     submitLabel="Save Changes"

@@ -15,17 +15,48 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { uploadGalleryImageAction } from "./actions";
+
+// Curated, relevant categories for a pan-India transport company's gallery.
+// "Other..." falls through to a free-text field so a new category can still
+// be added without a code change.
+export const GALLERY_CATEGORIES = [
+  "Fleet",
+  "Warehouse",
+  "Loading & Unloading",
+  "Textile Transportation",
+  "Industrial Cargo",
+  "Rail Freight",
+  "Branch Operations",
+  "Team & Events",
+];
+const OTHER_VALUE = "__other__";
 
 export function UploadImageDialog() {
   const [open, setOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
+  const [category, setCategory] = useState<string>(GALLERY_CATEGORIES[0]);
+  const [customCategory, setCustomCategory] = useState("");
   const [pending, startTransition] = useTransition();
   const formRef = useRef<HTMLFormElement>(null);
 
+  function resetCategory() {
+    setCategory(GALLERY_CATEGORIES[0]);
+    setCustomCategory("");
+  }
+
   function handleSubmit(formData: FormData) {
     setError(null);
+
+    const finalCategory = category === OTHER_VALUE ? customCategory.trim() : category;
+    if (!finalCategory) {
+      setError("Please enter a category name.");
+      return;
+    }
+    formData.set("category", finalCategory);
+
     startTransition(async () => {
       const result = await uploadGalleryImageAction(formData);
       if (result && "error" in result && result.error) {
@@ -35,6 +66,7 @@ export function UploadImageDialog() {
       toast.success("Image uploaded");
       setOpen(false);
       setPreview(null);
+      resetCategory();
       formRef.current?.reset();
     });
   }
@@ -47,6 +79,7 @@ export function UploadImageDialog() {
         if (next) setError(null);
         else {
           setPreview(null);
+          resetCategory();
           formRef.current?.reset();
         }
       }}
@@ -86,7 +119,28 @@ export function UploadImageDialog() {
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="category">Category</Label>
-            <Input id="category" name="category" placeholder="Fleet" defaultValue="Fleet" />
+            <Select value={category} onValueChange={setCategory}>
+              <SelectTrigger id="category" className="w-full">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {GALLERY_CATEGORIES.map((cat) => (
+                  <SelectItem key={cat} value={cat}>
+                    {cat}
+                  </SelectItem>
+                ))}
+                <SelectItem value={OTHER_VALUE}>Other...</SelectItem>
+              </SelectContent>
+            </Select>
+            {category === OTHER_VALUE ? (
+              <Input
+                value={customCategory}
+                onChange={(e) => setCustomCategory(e.target.value)}
+                placeholder="Enter a category name"
+                required
+                className="mt-2"
+              />
+            ) : null}
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="sortOrder">Sort order</Label>
