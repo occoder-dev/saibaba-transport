@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Brand-styled placeholder illustration for rail/train freight — used
+ * Brand-styled placeholder illustration for rail/train freight - used
  * anywhere we need a "just like the truck photos" visual moment for the
  * rail side of the business, without depending on a licensed stock photo.
  * Swap for a real photo of the fleet's rail partner wagons when available.

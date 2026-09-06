@@ -31,7 +31,7 @@ export async function GET(req: NextRequest) {
 
     const res = await fetch(url, {
       headers: {
-        "User-Agent": "SaibabaTransportWebsite/1.0 (+saibabatpt23@gmail.com)",
+        "User-Agent": "Sai BabaTransportWebsite/1.0 (+saibabatpt23@gmail.com)",
         "Accept-Language": "en",
       },
       // Nominatim asks integrators to be light on requests; short-lived

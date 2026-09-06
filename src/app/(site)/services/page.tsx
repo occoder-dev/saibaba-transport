@@ -14,7 +14,7 @@ import { getIcon } from "@/lib/icon-map";
 export const metadata: Metadata = {
   title: "Transportation Services",
   description:
-    "Full Truck Load, Part Truck Load, rail/train freight, textile transportation, industrial, commercial, dedicated, contract and pan-India transportation services from Saibaba Transport.",
+    "Full Truck Load, Part Truck Load, rail/train freight, textile transportation, industrial, commercial, dedicated, contract and pan-India transportation services from Sai Baba Transport.",
 };
 
 export default async function ServicesPage() {
@@ -25,7 +25,7 @@ export default async function ServicesPage() {
       <PageHero
         eyebrow="Our Services"
         title="Transportation services for every kind of load"
-        description="Dedicated vehicles, shared loads, rail freight, or a fully customized logistics plan - explore the range of road and rail transportation services Saibaba Transport offers across India."
+        description="Dedicated vehicles, shared loads, rail freight, or a fully customized logistics plan - explore the range of road and rail transportation services Sai Baba Transport offers across India."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
       />
 

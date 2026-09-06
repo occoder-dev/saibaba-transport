@@ -20,7 +20,7 @@ export default async function AdminLoginPage({
         <div className="mb-8 flex flex-col items-center gap-3 text-center">
           <Image
             src="/logo-transparent.png"
-            alt="Saibaba Transport"
+            alt="Sai Baba Transport"
             width={220}
             height={70}
             className="h-14 w-auto bg-white rounded-xl p-1"

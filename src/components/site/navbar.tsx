@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Menu, Phone, MessageCircle, LogIn } from "lucide-react";
+import { ChevronDown, Menu, Phone, LogIn, Search } from "lucide-react";
 
 import { navLinks, siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -53,7 +53,7 @@ export function Navbar() {
           <motion.div>
             <Image
               src="/logo-full.png"
-              alt="Saibaba Transport"
+              alt="Sai Baba Transport"
               width={80}
               height={40}
               className="bg-white rounded-xl p-1"
@@ -63,7 +63,7 @@ export function Navbar() {
 
         </Link>
 
-        <nav className="hidden items-center gap-0.5 xl:flex">
+        <nav className="hidden items-center gap-1 xl:flex">
           {navLinks.map((link) => (
             <div
               key={link.href}
@@ -74,7 +74,7 @@ export function Navbar() {
               <Link
                 href={link.href}
                 className={cn(
-                  "flex items-center gap-1 rounded-md px-2.5 py-2 text-sm font-semibold transition-colors duration-200 hover:text-primary",
+                  "flex items-center gap-1 rounded-md px-2 py-2 text-[13.5px] font-semibold transition-colors duration-200 hover:text-primary",
                   scrolled ? "text-foreground/80" : "text-white/85",
                   pathname === link.href && "text-primary"
                 )}
@@ -112,13 +112,14 @@ export function Navbar() {
         <div className="hidden items-center gap-1.5 xl:flex">
           <Button
             variant="ghost"
-            size="sm"
+            size="icon-sm"
             asChild
+            title="Customer Login"
+            aria-label="Customer Login"
             className={cn(!scrolled && "text-white hover:bg-white/10 hover:text-white")}
           >
             <a href={siteConfig.crmUrl} target="_blank" rel="noopener noreferrer">
               <LogIn className="size-4" />
-              Login
             </a>
           </Button>
           <Button
@@ -127,10 +128,10 @@ export function Navbar() {
             asChild
             className={cn(!scrolled && "border-white/30 bg-white/5 text-white hover:bg-white/10 hover:text-white")}
           >
-            <a href={siteConfig.whatsappHref} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="size-4" />
-              WhatsApp
-            </a>
+            <Link href="/track">
+              <Search className="size-4" />
+              Track Shipment
+            </Link>
           </Button>
           <Button size="sm" asChild className="group">
             <Link href="/estimate">
@@ -183,6 +184,11 @@ export function Navbar() {
                 </motion.div>
               ))}
               <div className="mt-4 flex flex-col gap-2 border-t border-border pt-4">
+                <Button variant="outline" asChild>
+                  <Link href="/track">
+                    <Search className="size-4" /> Track Shipment
+                  </Link>
+                </Button>
                 <Button variant="outline" asChild>
                   <a href={siteConfig.crmUrl} target="_blank" rel="noopener noreferrer">
                     <LogIn className="size-4" /> Customer Login

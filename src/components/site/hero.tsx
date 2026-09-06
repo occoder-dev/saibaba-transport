@@ -1,37 +1,25 @@
 "use client";
-
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Award, MapPinned, ShieldCheck, Truck } from "lucide-react";
+import { ArrowRight, Award, MapPinned, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/data";
+import { NetworkGraph } from "@/components/motion/network-graph";
+import { stats } from "@/lib/data";
 
 export function Hero() {
   return (
     <section className="relative flex min-h-[640px] items-center overflow-hidden bg-brand-charcoal pt-24 pb-16 text-white sm:min-h-[85vh] sm:pt-28 sm:pb-20 lg:min-h-[92vh]">
-      {/* Single full-bleed photo — the truck itself IS the background on the right,
-          fading into the brand-charcoal panel on the left where the copy sits. */}
-      <motion.div
-        className="absolute inset-0"
-        initial={{ scale: 1.08 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 12, ease: [0.16, 1, 0.3, 1] }}
-      >
-        <Image
-          src="/images/truck-hero.jpg"
-          alt="A Saibaba Transport truck at golden hour, branded container reading Saibaba Transport, Moving Yourself for Success"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[62%_38%] sm:object-[68%_42%]"
-        />
-      </motion.div>
+      {/* Ops-room texture: a faint grid across the whole hero */}
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-[0.05]" />
+      <div className="c5-photo"></div>
+      <div className="c5-grid-overlay"></div>
+      <div className="c5-scrim"></div>
+      {/* The network itself is the visual, anchored to the right - no stock
+          photo. A live route pulses between our real branch cities. */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-full sm:block sm:w-[68%] lg:w-[58%]">
+        <NetworkGraph className="h-full w-full" />
+      </div>
 
-      {/* Horizontal fade: solid charcoal on the left for legible copy, fully clear over the truck on the right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-charcoal via-brand-charcoal/92 via-35% to-transparent to-75% sm:via-40% sm:to-65%" />
-      {/* Vertical fades: keep the nav bar and bottom trust row legible over sky / ground */}
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-charcoal/55 via-transparent to-brand-charcoal/70" />
 
       <motion.div
         className="pointer-events-none absolute bottom-[-15%] left-[-10%] size-[26rem] rounded-full bg-primary/25 blur-3xl"
@@ -50,7 +38,10 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur-sm"
           >
-            <Truck className="size-3.5" />
+            <span className="relative flex size-2">
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex size-2 rounded-full bg-emerald-400" />
+            </span>
             Pan-India Transportation Partner
           </motion.div>
 
@@ -71,17 +62,17 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-lg text-base leading-relaxed text-white/70 sm:text-lg"
           >
-            {siteConfig.description} From bulk textile dispatch to pan-India
-            contract transportation — one reliable partner for every route.
+            Pan-India multimodal logistics for textile, industrial and commercial goods - road and
+            rail, backed by our own fleet and a verified partner network.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-8 flex flex-wrap items-center gap-3"
+            transition={{ duration: 0.6, delay: 0.38 }}
+            className="mt-5 flex flex-wrap items-center gap-3"
           >
-            <Button size="lg" asChild className="group">
+            <Button variant="default" asChild>
               <Link href="/estimate">
                 Calculate Transport Cost
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
@@ -95,11 +86,11 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.45 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-white/65"
           >
             <span className="flex items-center gap-2">
-              <Award className="size-4 text-primary" /> 15+ years of trust
+              <Award className="size-4 text-primary" /> 20+ years of trust
             </span>
             <span className="flex items-center gap-2">
               <MapPinned className="size-4 text-primary" /> Branches across India
@@ -110,6 +101,30 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
+
+      {/* Network readout - a small, honest snapshot of the real network sitting
+          near the route graph, distinct from the full stat band below. */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.55 }}
+        className="pointer-events-none absolute bottom-10 right-6 z-10 hidden w-56 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm lg:block xl:right-10"
+      >
+        <p className="flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wider text-white/45">
+          <span className="size-1.5 rounded-full bg-emerald-400" /> Network Snapshot
+        </p>
+        <dl className="mt-3 space-y-2">
+          {stats.map((stat) => (
+            <div key={stat.label} className="flex items-center justify-between border-b border-white/10 pb-2 text-xs last:border-0 last:pb-0">
+              <dt className="text-white/55">{stat.label}</dt>
+              <dd className="font-display text-base tracking-wide text-white tabular-nums">
+                {stat.value.toLocaleString("en-IN")}
+                {stat.suffix}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </motion.div>
     </section>
   );
 }

@@ -4,7 +4,7 @@ import { Reveal } from "@/components/motion/reveal";
 
 export const metadata: Metadata = {
   title: "Disclaimer",
-  description: "Website disclaimer and cookie information for the Saibaba Transport website.",
+  description: "Website disclaimer and cookie information for the Sai Baba Transport website.",
 };
 
 const sections = [

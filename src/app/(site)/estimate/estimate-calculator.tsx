@@ -400,7 +400,7 @@ export function EstimateCalculator() {
               <div className="flex justify-center">
                 <Image
                   src="/images/cost-estimater-v.png"
-                  alt="Saibaba Transport truck"
+                  alt="Sai Baba Transport truck"
                   width={1080}
                   height={1350}
                   className="block h-auto w-full object-contain"

@@ -1,6 +1,6 @@
-# Saibaba Transport - Website + Admin Panel
+# Sai Baba Transport - Website + Admin Panel
 
-A Next.js 16 (App Router) website for Saibaba Transport, backed by a
+A Next.js 16 (App Router) website for Sai Baba Transport, backed by a
 PostgreSQL database and a full admin panel for managing site content,
 pricing, and enquiries - no code changes needed for day-to-day updates.
 

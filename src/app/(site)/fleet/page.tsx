@@ -90,7 +90,7 @@ export default async function FleetPage() {
               <div className="overflow-hidden rounded-2xl border border-border/70 shadow-premium">
                 <Image
                   src="/images/truck-hero.jpg"
-                  alt="A Saibaba Transport truck for road transportation"
+                  alt="A Sai Baba Transport truck for road transportation"
                   width={360}
                   height={440}
                   className="aspect-[3/4] w-full object-cover object-[60%_35%]"

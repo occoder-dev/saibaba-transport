@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 
 export const siteConfig = {
-  name: "Saibaba Transport",
+  name: "Sai Baba Transport",
   tagline: "Moving Yourself for Success",
   description:
     "Pan-India multimodal transportation and logistics partner for textile, industrial and commercial goods - road (full truck load, part truck load) and rail freight, backed by dedicated fleet solutions.",
@@ -84,7 +84,7 @@ export const services: Service[] = [
     name: "Textile Transportation",
     short: "Our core specialty - factory-to-destination textile logistics.",
     description:
-      "Textile transportation is where Saibaba Transport began, and it remains our core strength. From grey fabric to finished garments, we handle bulk textile movement between mills, processing units, wholesale markets and retail destinations across India.",
+      "Textile transportation is where Sai Baba Transport began, and it remains our core strength. From grey fabric to finished garments, we handle bulk textile movement between mills, processing units, wholesale markets and retail destinations across India.",
     icon: Shirt,
     points: ["Deep textile-corridor experience", "Bulk & bale-safe handling", "Mill-to-market coverage", "Trusted by textile traders for years"],
   },
@@ -285,7 +285,7 @@ export type FAQ = { question: string; answer: string; category: string };
 export const faqs: FAQ[] = [
   {
     category: "Services",
-    question: "What kind of transportation services does Saibaba Transport offer?",
+    question: "What kind of transportation services does Sai Baba Transport offer?",
     answer:
       "We offer Full Truck Load (FTL), Part Truck Load (PTL), rail/train freight transportation, textile transportation, industrial and commercial transportation, dedicated and contract transportation, third-party network transportation, and customized logistics solutions across India.",
   },
@@ -340,9 +340,9 @@ export const faqs: FAQ[] = [
 ];
 
 export const stats = [
-  { label: "Years of Transportation Experience", value: 15, suffix: "+" },
-  { label: "Branches Across India", value: 6, suffix: "" },
-  { label: "States Covered", value: 12, suffix: "+" },
+  { label: "Years of Transportation Experience", value: 20, suffix: "+" },
+  { label: "Branches Across India", value: 15, suffix: "" },
+  { label: "States Covered", value: 4, suffix: "+" },
   { label: "Consignments Moved", value: 25000, suffix: "+" },
 ];
 
@@ -403,7 +403,7 @@ export const blogPosts = [
       "India's textile trade runs on a handful of well-worn corridors - mill towns feeding processing units, processing units feeding wholesale markets, and wholesale markets feeding retail and export destinations. Understanding these routes is the first step to planning reliable dispatch schedules.",
       "Corridors like Surat–Mumbai, Tirupur–Bengaluru and Ludhiana–Delhi see some of the heaviest bulk textile movement in the country, each with its own seasonal peaks tied to festival and export cycles.",
       "For shippers, the practical takeaway is to plan capacity ahead of known peak periods, work with a transporter who understands bale-safe handling, and keep communication open on pickup windows - textile dispatch schedules are often tighter than other commercial cargo.",
-      "Saibaba Transport's branch network is built around these corridors, which is why textile transportation remains at the core of what we do.",
+      "Sai Baba Transport's branch network is built around these corridors, which is why textile transportation remains at the core of what we do.",
     ],
   },
   {
@@ -422,7 +422,7 @@ export const blogPosts = [
   },
   {
     slug: "new-branch-tirupur",
-    title: "Saibaba Transport Expands Network with New Tirupur Branch",
+    title: "Sai Baba Transport Expands Network with New Tirupur Branch",
     excerpt:
       "Our newest branch strengthens coverage for the knitwear cluster, improving turnaround times for textile exporters and traders in the region.",
     date: "2026-04-21",

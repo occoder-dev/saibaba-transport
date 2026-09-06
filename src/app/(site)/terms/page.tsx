@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description: "Terms and Conditions for using the Saibaba Transport website.",
+  description: "Terms and Conditions for using the Sai Baba Transport website.",
 };
 
 const sections = [
@@ -15,7 +15,7 @@ const sections = [
   },
   {
     title: "2. Website Purpose",
-    body: "This website provides general information about Saibaba Transport's services, branch network, and enables enquiries, quote requests and partnership registrations. It does not constitute a binding offer of transportation services.",
+    body: "This website provides general information about Sai Baba Transport's services, branch network, and enables enquiries, quote requests and partnership registrations. It does not constitute a binding offer of transportation services.",
   },
   {
     title: "3. Transport Estimation Calculator",
@@ -31,11 +31,11 @@ const sections = [
   },
   {
     title: "6. Intellectual Property",
-    body: "The Saibaba Transport name, logo and website content are the property of Saibaba Transport and may not be used without prior written permission, except as necessary to use this website for its intended purpose.",
+    body: "The Sai Baba Transport name, logo and website content are the property of Sai Baba Transport and may not be used without prior written permission, except as necessary to use this website for its intended purpose.",
   },
   {
     title: "7. Limitation of Liability",
-    body: "Saibaba Transport shall not be liable for any indirect, incidental or consequential damages arising from the use of this website, including reliance on indicative estimates provided by the transport calculator.",
+    body: "Sai Baba Transport shall not be liable for any indirect, incidental or consequential damages arising from the use of this website, including reliance on indicative estimates provided by the transport calculator.",
   },
   {
     title: "8. Governing Law",
@@ -53,7 +53,7 @@ export default function TermsPage() {
       <PageHero
         eyebrow="Legal"
         title="Terms & Conditions"
-        description="Please read these terms carefully before using the Saibaba Transport website."
+        description="Please read these terms carefully before using the Sai Baba Transport website."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Terms & Conditions" }]}
       />
       <section className="py-20 sm:py-28">

@@ -21,12 +21,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.saibabatransport.com"),
 
   title: {
-    default: "Saibaba Transport | Pan-India Transportation & Logistics",
-    template: "%s | Saibaba Transport",
+    default: "Sai Baba Transport | Pan-India Transportation & Logistics",
+    template: "%s | Sai Baba Transport",
   },
 
   description:
-    "Saibaba Transport is a pan-India multimodal transportation and logistics company specializing in textile, industrial and commercial goods movement - road (Full Truck Load, Part Truck Load) and rail freight, plus dedicated fleet solutions.",
+    "Sai Baba Transport is a pan-India multimodal transportation and logistics company specializing in textile, industrial and commercial goods movement - road (Full Truck Load, Part Truck Load) and rail freight, plus dedicated fleet solutions.",
 
   keywords: [
     "transport company in India",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://www.saibabatransport.com",
-    siteName: "Saibaba Transport",
-    title: "Saibaba Transport | Pan-India Transportation & Logistics",
+    siteName: "Sai Baba Transport",
+    title: "Sai Baba Transport | Pan-India Transportation & Logistics",
     description:
       "Reliable pan-India road and rail transportation for textile, industrial and commercial goods.",
     images: [
@@ -53,14 +53,14 @@ export const metadata: Metadata = {
         url: "/social-preview.png",
         width: 1200,
         height: 630,
-        alt: "Saibaba Transport - Pan-India Transportation & Logistics",
+        alt: "Sai Baba Transport - Pan-India Transportation & Logistics",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Saibaba Transport | Pan-India Transportation & Logistics",
+    title: "Sai Baba Transport | Pan-India Transportation & Logistics",
     description:
       "Reliable pan-India road and rail transportation for textile, industrial and commercial goods.",
     images: ["/social-preview.png"],

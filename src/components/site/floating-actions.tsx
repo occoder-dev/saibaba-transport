@@ -14,7 +14,7 @@ export function FloatingActions() {
     >
       <motion.a
         href={siteConfig.phoneHref}
-        aria-label="Call Saibaba Transport"
+        aria-label="Call Sai Baba Transport"
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
         className="flex size-12 items-center justify-center rounded-full bg-brand-charcoal text-white shadow-lg shadow-black/20"

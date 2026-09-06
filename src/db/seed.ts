@@ -50,7 +50,7 @@ const serviceSeed = [
     name: "Textile Transportation",
     short: "Our core specialty - factory-to-destination textile logistics.",
     description:
-      "Textile transportation is where Saibaba Transport began, and it remains our core strength. From grey fabric to finished garments, we handle bulk textile movement between mills, processing units, wholesale markets and retail destinations across India.",
+      "Textile transportation is where Sai Baba Transport began, and it remains our core strength. From grey fabric to finished garments, we handle bulk textile movement between mills, processing units, wholesale markets and retail destinations across India.",
     icon: "Shirt",
     points: ["Deep textile-corridor experience", "Bulk & bale-safe handling", "Mill-to-market coverage", "Trusted by textile traders for years"],
     sortOrder: 3,
@@ -162,9 +162,9 @@ const materialCategorySeed = [
 ];
 
 const gallerySeed = [
-  { url: "/images/truck-02.jpeg", caption: "Saibaba Transport container truck ready for dispatch", category: "Fleet", sortOrder: 0 },
-  { url: "/images/truck-01.jpeg", caption: "Saibaba Transport truck on the road at dusk", category: "Fleet", sortOrder: 1 },
-  { url: "/images/truck-03.jpeg", caption: "Two Saibaba Transport trucks parked at the warehouse", category: "Warehouse", sortOrder: 2 },
+  { url: "/images/truck-02.jpeg", caption: "Sai Baba Transport container truck ready for dispatch", category: "Fleet", sortOrder: 0 },
+  { url: "/images/truck-01.jpeg", caption: "Sai Baba Transport truck on the road at dusk", category: "Fleet", sortOrder: 1 },
+  { url: "/images/truck-03.jpeg", caption: "Two Sai Baba Transport trucks parked at the warehouse", category: "Warehouse", sortOrder: 2 },
 ];
 
 async function main() {

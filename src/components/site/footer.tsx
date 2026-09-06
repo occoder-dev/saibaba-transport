@@ -49,7 +49,7 @@ export async function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-2.5">
-              <Image src="/logo-transparent.png" alt="Saibaba Transport" width={120} height={80} className=" bg-white rounded-xl" />
+              <Image src="/logo-transparent.png" alt="Sai Baba Transport" width={120} height={80} className=" bg-white rounded-xl" />
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
               {siteConfig.description}
@@ -158,7 +158,7 @@ export async function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-center sm:flex-row sm:text-left">
           <p className="text-xs text-white/50">
-            © {new Date().getFullYear()} Saibaba Transport. All rights reserved.
+            © {new Date().getFullYear()} Sai Baba Transport. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             {legalLinks.map((l) => (

@@ -10,7 +10,7 @@ import { listBranches } from "@/lib/services/branches";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with Saibaba Transport - head office, branch contacts, and general enquiry form.",
+  description: "Get in touch with Sai Baba Transport - head office, branch contacts, and general enquiry form.",
 };
 
 const fields: EnquiryField[] = [
@@ -98,7 +98,7 @@ export default async function ContactPage() {
                     <Clock className="mt-0.5 size-5 shrink-0 text-primary" />
                     <div>
                       <p className="text-sm font-medium text-brand-charcoal">Business Hours</p>
-                      <p className="text-sm text-muted-foreground">Monday – Saturday, 9:30 AM – 7:00 PM IST</p>
+                      <p className="text-sm text-muted-foreground">Monday – Saturday, 11:00 AM – 10:00 PM IST</p>
                     </div>
                   </div>
                 </StaggerItem>
@@ -124,7 +124,7 @@ export default async function ContactPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
-                title="Saibaba Transport - Head Office Location"
+                title="Sai Baba Transport - Head Office Location"
               />
             </div>
             <a

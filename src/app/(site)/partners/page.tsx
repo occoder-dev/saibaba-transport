@@ -10,7 +10,7 @@ import { listIndustries } from "@/lib/services/industries";
 
 export const metadata: Metadata = {
   title: "Business Partnership",
-  description: "Become a transportation partner with Saibaba Transport - submit your business partnership enquiry.",
+  description: "Become a transportation partner with Sai Baba Transport - submit your business partnership enquiry.",
 };
 
 export default async function PartnersPage() {
@@ -50,7 +50,7 @@ export default async function PartnersPage() {
             <div>
               <SectionHeading
                 eyebrow="Why Partner With Us"
-                title="What business partners get with Saibaba Transport"
+                title="What business partners get with Sai Baba Transport"
               />
               <Stagger className="mt-8 space-y-4">
                 {partnerReasons.map((reason) => (
@@ -78,7 +78,7 @@ export default async function PartnersPage() {
               enquiryType="PARTNER"
               submitLabel="Submit Partnership Enquiry"
               successTitle="Partnership enquiry received"
-              successDescription="Thank you for your interest in partnering with Saibaba Transport. Our team will review your details and reach out soon."
+              successDescription="Thank you for your interest in partnering with Sai Baba Transport. Our team will review your details and reach out soon."
             />
           </div>
         </div>

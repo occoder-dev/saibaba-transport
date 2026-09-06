@@ -5,7 +5,7 @@ import { listVehicleTypes, listMaterialCategories } from "@/lib/services/pricing
 
 export const metadata: Metadata = {
   title: "Request a Quote",
-  description: "Request a formal transportation quotation from Saibaba Transport for your shipment.",
+  description: "Request a formal transportation quotation from Sai Baba Transport for your shipment.",
 };
 
 export default async function QuotePage({

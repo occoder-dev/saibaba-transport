@@ -6,7 +6,7 @@ import { listFaqs } from "@/lib/services/faqs";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
-  description: "Answers to common questions about Saibaba Transport's services, booking, pricing and partnerships.",
+  description: "Answers to common questions about Sai Baba Transport's services, booking, pricing and partnerships.",
 };
 
 export default async function FaqPage() {

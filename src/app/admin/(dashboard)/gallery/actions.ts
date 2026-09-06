@@ -1,8 +1,7 @@
 "use server";
 
 import { randomUUID } from "node:crypto";
-import { mkdir, unlink, writeFile } from "node:fs/promises";
-import path from "node:path";
+import { put, del } from "@vercel/blob";
 import { revalidatePath } from "next/cache";
 import { requireRole } from "@/lib/auth/guard";
 import {
@@ -12,7 +11,15 @@ import {
   getGalleryImage,
 } from "@/lib/services/gallery";
 
-const UPLOAD_DIR = path.join(process.cwd(), "public", "uploads", "gallery");
+// Uploaded images are stored in Vercel Blob rather than on the local
+// filesystem. Vercel's production deployments run on a read-only,
+// serverless filesystem (only /tmp is writable, and it isn't shared between
+// invocations), so writing files with node:fs like the old implementation
+// did works locally but silently/loudly fails once deployed - that's the
+// "failed to upload" error on Vercel. Blob storage works the same way in
+// both local dev and production, as long as BLOB_READ_WRITE_TOKEN is set
+// (see .env.example).
+const BLOB_FOLDER = "gallery";
 const ALLOWED_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
 const MAX_BYTES = 8 * 1024 * 1024; // 8MB
 
@@ -41,15 +48,23 @@ export async function uploadGalleryImageAction(formData: FormData) {
   }
 
   const ext = file.type === "image/png" ? "png" : file.type === "image/webp" ? "webp" : "jpg";
-  const filename = `${randomUUID()}.${ext}`;
+  const filename = `${BLOB_FOLDER}/${randomUUID()}.${ext}`;
 
   try {
-    await mkdir(UPLOAD_DIR, { recursive: true });
-    const bytes = Buffer.from(await file.arrayBuffer());
-    await writeFile(path.join(UPLOAD_DIR, filename), bytes);
-    await createGalleryImage({ url: `/uploads/gallery/${filename}`, caption, category, sortOrder });
+    const blob = await put(filename, file, {
+      access: "public",
+      addRandomSuffix: false,
+      contentType: file.type,
+    });
+    await createGalleryImage({ url: blob.url, caption, category, sortOrder });
   } catch (err) {
     console.error("Failed to upload gallery image", err);
+    if (err instanceof Error && /BLOB_READ_WRITE_TOKEN/i.test(err.message)) {
+      return {
+        error:
+          "Image storage isn't configured yet. Add a Blob store to this project in Vercel (Storage -> Create Database -> Blob) and set BLOB_READ_WRITE_TOKEN.",
+      };
+    }
     return { error: "Failed to upload image." };
   }
   revalidateGalleryPaths();
@@ -82,8 +97,8 @@ export async function deleteGalleryImageAction(id: string) {
   try {
     const image = await getGalleryImage(id);
     await deleteGalleryImage(id);
-    if (image?.url.startsWith("/uploads/gallery/")) {
-      await unlink(path.join(process.cwd(), "public", image.url)).catch(() => {});
+    if (image?.url.includes("blob.vercel-storage.com")) {
+      await del(image.url).catch(() => {});
     }
   } catch (err) {
     console.error("Failed to delete gallery image", err);

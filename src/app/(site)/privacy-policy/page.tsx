@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for the Saibaba Transport website.",
+  description: "Privacy Policy for the Sai Baba Transport website.",
 };
 
 const sections = [
@@ -49,7 +49,7 @@ export default function PrivacyPolicyPage() {
       <PageHero
         eyebrow="Legal"
         title="Privacy Policy"
-        description="This policy explains how Saibaba Transport collects, uses and protects information submitted through this website."
+        description="This policy explains how Sai Baba Transport collects, uses and protects information submitted through this website."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Privacy Policy" }]}
       />
       <section className="py-20 sm:py-28">

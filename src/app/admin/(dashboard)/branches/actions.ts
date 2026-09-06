@@ -11,9 +11,22 @@ function linesToArray(value: FormDataEntryValue | null): string[] {
     .filter(Boolean);
 }
 
+// Normalize a state name to Title Case ("BIHAR" / "bihar" -> "Bihar") so
+// entries typed in different cases don't create duplicate-looking states in
+// the branches list and filters.
+function toTitleCase(value: string): string {
+  return value
+    .trim()
+    .toLowerCase()
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
 function parseBranchForm(formData: FormData) {
   const city = String(formData.get("city") ?? "").trim();
-  const state = String(formData.get("state") ?? "").trim();
+  const state = toTitleCase(String(formData.get("state") ?? ""));
   const address = String(formData.get("address") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const phones = linesToArray(formData.get("phones"));

@@ -57,7 +57,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
             >
               <Image
                 src={image.url}
-                alt={image.caption || "Saibaba Transport gallery photo"}
+                alt={image.caption || "Sai Baba Transport gallery photo"}
                 fill
                 sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -80,7 +80,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
               <div className="relative aspect-4/3 w-full">
                 <Image
                   src={lightbox.url}
-                  alt={lightbox.caption || "Saibaba Transport gallery photo"}
+                  alt={lightbox.caption || "Sai Baba Transport gallery photo"}
                   fill
                   sizes="100vw"
                   className="object-contain"

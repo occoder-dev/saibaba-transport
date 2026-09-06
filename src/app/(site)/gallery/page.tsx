@@ -7,7 +7,7 @@ import { GalleryGrid } from "./gallery-grid";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Photos of Saibaba Transport's fleet, ongoing loads and warehouse operations from across our pan-India branch network.",
+    "Photos of Sai Baba Transport's fleet, ongoing loads and warehouse operations from across our pan-India branch network.",
 };
 
 export default async function GalleryPage() {
@@ -18,7 +18,7 @@ export default async function GalleryPage() {
       <PageHero
         eyebrow="Gallery"
         title="Our fleet, loads & operations"
-        description="A look at our fleet, ongoing loads and warehouse operations from across the Saibaba Transport network."
+        description="A look at our fleet, ongoing loads and warehouse operations from across the Sai Baba Transport network."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Gallery" }]}
       />
 

@@ -8,7 +8,7 @@ import { BranchesClient } from "./branches-client";
 export const metadata: Metadata = {
   title: "Our Branches",
   description:
-    "Saibaba Transport branches across India - addresses, contact details and services available at each location.",
+    "Sai Baba Transport branches across India - addresses, contact details and services available at each location.",
 };
 
 export default async function BranchesPage() {

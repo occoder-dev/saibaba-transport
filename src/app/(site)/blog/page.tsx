@@ -9,7 +9,7 @@ import { listBlogPosts } from "@/lib/services/blog";
 
 export const metadata: Metadata = {
   title: "Blog & Company Updates",
-  description: "Logistics articles, industry updates and company news from Saibaba Transport.",
+  description: "Logistics articles, industry updates and company news from Sai Baba Transport.",
 };
 
 export default async function BlogPage() {

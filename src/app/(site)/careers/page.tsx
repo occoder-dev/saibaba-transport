@@ -8,7 +8,7 @@ import { Stagger, StaggerItem } from "@/components/motion/reveal";
 
 export const metadata: Metadata = {
   title: "Careers",
-  description: "Explore career opportunities with Saibaba Transport across our pan-India branch network.",
+  description: "Explore career opportunities with Sai Baba Transport across our pan-India branch network.",
 };
 
 const openings = [
@@ -68,7 +68,7 @@ export default function CareersPage() {
               enquiryType="CAREER"
               submitLabel="Submit Application"
               successTitle="Application received"
-              successDescription="Thank you for your interest in joining Saibaba Transport. Our HR team will review your application and reach out if there's a match."
+              successDescription="Thank you for your interest in joining Sai Baba Transport. Our HR team will review your application and reach out if there's a match."
             />
           </div>
         </div>

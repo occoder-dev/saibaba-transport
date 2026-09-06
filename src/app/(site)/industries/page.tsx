@@ -11,7 +11,7 @@ import { getIcon } from "@/lib/icon-map";
 export const metadata: Metadata = {
   title: "Industries We Serve",
   description:
-    "Saibaba Transport supports textile, manufacturing, retail, FMCG, e-commerce, industrial, automotive, construction and pharmaceutical businesses across India.",
+    "Sai Baba Transport supports textile, manufacturing, retail, FMCG, e-commerce, industrial, automotive, construction and pharmaceutical businesses across India.",
 };
 
 export default async function IndustriesPage() {

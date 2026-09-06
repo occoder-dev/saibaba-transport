@@ -10,7 +10,7 @@ import { listVehicleTypes } from "@/lib/services/pricing";
 
 export const metadata: Metadata = {
   title: "Transporter Registration",
-  description: "Register your trucks with Saibaba Transport's third-party transporter network.",
+  description: "Register your trucks with Sai Baba Transport's third-party transporter network.",
 };
 
 const benefitIcons = [TrendingUp, Banknote, MapPinned, Handshake];
@@ -37,7 +37,7 @@ export default async function TransporterRegistrationPage() {
       <PageHero
         eyebrow="Transporter Registration"
         title="Register your fleet with our network"
-        description="Truck owners and operators can register with Saibaba Transport to receive load opportunities across our growing pan-India network."
+        description="Truck owners and operators can register with Sai Baba Transport to receive load opportunities across our growing pan-India network."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Partner With Us", href: "/partners" }, { label: "Transporter Registration" }]}
       />
 

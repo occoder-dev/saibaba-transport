@@ -7,11 +7,28 @@ import { BranchCard } from "@/components/site/branch-card";
 import { Button } from "@/components/ui/button";
 import { Stagger } from "@/components/motion/reveal";
 
+// Group/filter by a case- and whitespace-insensitive key so "Bihar" and
+// "BIHAR" (or stray extra spaces) are treated as the same state instead of
+// producing separate filter tabs.
+function stateKey(state: string) {
+  return state.trim().toLowerCase();
+}
+
 export function BranchesClient({ branches }: { branches: Branch[] }) {
-  const states = useMemo(() => ["All States", ...Array.from(new Set(branches.map((b) => b.state)))], [branches]);
+  const states = useMemo(() => {
+    const seen = new Map<string, string>();
+    for (const branch of branches) {
+      const key = stateKey(branch.state);
+      if (!key) continue;
+      // Keep the first-seen casing as the display label for this state.
+      if (!seen.has(key)) seen.set(key, branch.state.trim());
+    }
+    return ["All States", ...Array.from(seen.values())];
+  }, [branches]);
   const [active, setActive] = useState("All States");
 
-  const filtered = active === "All States" ? branches : branches.filter((b) => b.state === active);
+  const filtered =
+    active === "All States" ? branches : branches.filter((b) => stateKey(b.state) === stateKey(active));
 
   return (
     <div>

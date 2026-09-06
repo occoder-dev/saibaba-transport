@@ -96,9 +96,9 @@ export default async function Home() {
       </section>
 
       {/* Textile spotlight */}
-      <section className="relative overflow-hidden bg-accent/60 py-20 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
-          <Reveal>
+      <section className="relative overflow-hidden bg-accent/60 py-20 sm:py-24 lg:py-0">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-24">
+          <Reveal className="lg:max-w-[46%]">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-white px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-primary">
               <Shirt className="size-3.5" /> Our Founding Specialty
             </span>
@@ -107,7 +107,7 @@ export default async function Home() {
               and where we lead
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              From grey fabric to finished garments, Saibaba Transport moves bulk
+              From grey fabric to finished garments, Sai Baba Transport moves bulk
               textile cargo between mills, processing units, wholesale markets and
               retail destinations across India - with the careful, bale-safe
               handling the textile trade demands.
@@ -130,20 +130,25 @@ export default async function Home() {
               </Link>
             </Button>
           </Reveal>
-
-          <Reveal delay={0.15} className="relative">
-            <div className="relative mx-auto flex aspect-square max-w-md items-center justify-center rounded-3xl bg-white shadow-xl">
-              <div className="absolute inset-6 rounded-2xl border-2 border-dashed border-primary/20" />
-              <Image
-                src="/images/textile-transportation.png"
-                alt="Saibaba Transport textile transportation"
-                width={380}
-                height={380}
-                className="relative w-2/3 max-w-xs"
-              />
-            </div>
-          </Reveal>
         </div>
+
+        {/* Image: a contained banner below the text on mobile/tablet; a
+            full-bleed column that covers the section's full height and
+            exactly half its width, pinned to the right, on large screens. */}
+        <Reveal
+          delay={0.15}
+          className="relative mx-4 mt-12 h-64 overflow-hidden rounded-3xl shadow-xl sm:mx-6 sm:h-80 lg:absolute lg:inset-y-0 lg:right-0 lg:mx-0 lg:mt-0 lg:h-full lg:w-1/2 lg:rounded-none lg:shadow-none"
+        >
+          <Image
+            src="/images/textile-transportation.png"
+            alt="Sai Baba Transport textile transportation"
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
+          {/* Soften the seam against the section's accent background on large screens */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-24 bg-gradient-to-r from-accent/70 to-transparent lg:block" />
+        </Reveal>
       </section>
 
       {/* Industries preview */}
@@ -225,7 +230,7 @@ export default async function Home() {
               <SectionHeading
                 eyebrow="Gallery"
                 title="A look at our fleet, loads & operations"
-                description="Real photos of Saibaba Transport's fleet, ongoing loads and warehouse operations from across our branch network."
+                description="Real photos of Sai Baba Transport's fleet, ongoing loads and warehouse operations from across our branch network."
               />
               <Reveal>
                 <Button variant="outline" asChild className="shrink-0">
@@ -245,7 +250,7 @@ export default async function Home() {
                   >
                     <Image
                       src={image.url}
-                      alt={image.caption || "Saibaba Transport gallery photo"}
+                      alt={image.caption || "Sai Baba Transport gallery photo"}
                       fill
                       sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"

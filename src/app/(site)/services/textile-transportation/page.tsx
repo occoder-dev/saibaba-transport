@@ -10,7 +10,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 export const metadata: Metadata = {
   title: "Textile Transportation",
   description:
-    "Saibaba Transport's core specialty - bulk textile transportation from mills and processing units to wholesale markets and retail destinations across India.",
+    "Sai Baba Transport's core specialty - bulk textile transportation from mills and processing units to wholesale markets and retail destinations across India.",
 };
 
 const capabilities = [
@@ -49,7 +49,7 @@ export default function TextileTransportationPage() {
       <PageHero
         eyebrow="Our Core Specialty"
         title="Textile Transportation"
-        description="Textile transportation is where Saibaba Transport began, and it remains our core strength - bulk textile movement between mills, processing units, wholesale markets and retail destinations across India."
+        description="Textile transportation is where Sai Baba Transport began, and it remains our core strength - bulk textile movement between mills, processing units, wholesale markets and retail destinations across India."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services" },
@@ -91,7 +91,7 @@ export default function TextileTransportationPage() {
             <div className="relative mx-auto max-w-md overflow-hidden rounded-3xl border border-border/70 shadow-premium-lg">
               <Image
                 src="/images/textile-trade.png"
-                alt="Saibaba Transport vehicles loading at a warehouse dock, ready for textile dispatch"
+                alt="Sai Baba Transport vehicles loading at a warehouse dock, ready for textile dispatch"
                 width={720}
                 height={720}
                 className="aspect-auto w-full object-cover"

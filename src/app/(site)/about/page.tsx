@@ -11,7 +11,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Saibaba Transport's history, vision, mission and pan-India transportation network built around reliable, business-friendly logistics.",
+    "Learn about Sai Baba Transport's history, vision, mission and pan-India transportation network built around reliable, business-friendly logistics.",
 };
 
 const timeline = [
@@ -19,7 +19,7 @@ const timeline = [
     year: "Founding Years",
     title: "Started in Textile Transportation",
     description:
-      "Saibaba Transport began by serving the textile trade - moving fabric and garments between mills, processing units and wholesale markets.",
+      "Sai Baba Transport began by serving the textile trade - moving fabric and garments between mills, processing units and wholesale markets.",
   },
   {
     year: "Growth Phase",
@@ -37,7 +37,7 @@ const timeline = [
     year: "Today",
     title: "A Pan-India Transportation Partner",
     description:
-      "Today, Saibaba Transport combines its own fleet with a wider partner network to serve businesses across multiple industries nationwide.",
+      "Today, Sai Baba Transport combines its own fleet with a wider partner network to serve businesses across multiple industries nationwide.",
   },
 ];
 
@@ -87,7 +87,7 @@ const leadershipMessages = [
     image: "/images/Jagdish-Shukla.png",
     title: "A personal note to everyone who moves with us",
     message: [
-      "To every transporter, driver and business partner who has worked alongside us - thank you for being part of the Saibaba Transport story. What started as a small textile transportation operation has grown only because of the trust you placed in us, shipment after shipment, route after route.",
+      "To every transporter, driver and business partner who has worked alongside us - thank you for being part of the Sai Baba Transport story. What started as a small textile transportation operation has grown only because of the trust you placed in us, shipment after shipment, route after route.",
       "To our team members, your discipline on the road and honesty in every handover is what our clients actually experience as reliable service. And to the businesses who ship with us - we know your cargo is your business, and we treat it that way every single time.",
       "As we continue expanding across India, our commitment stays the same: transparent pricing, accountable partners, and a team that picks up the phone. Thank you for moving forward with us.",
     ],
@@ -100,7 +100,7 @@ const leadershipMessages = [
     message: [
       "Transportation is not simply about moving goods from one place to another. It is about understanding what is important to our customers and making sure every shipment receives the attention it deserves.",
       "Our focus has always been on dependable execution - coordinating vehicles, drivers, routes and delivery schedules while keeping communication clear throughout the journey.",
-      "As Saibaba Transport continues to grow, we remain committed to building strong customer relationships through consistency, responsiveness and service that businesses can depend on.",
+      "As Sai Baba Transport continues to grow, we remain committed to building strong customer relationships through consistency, responsiveness and service that businesses can depend on.",
     ],
   },
   {
@@ -110,7 +110,7 @@ const leadershipMessages = [
     title: "Growing together with our customers and partners",
     message: [
       "The strength of a transportation company comes from the relationships it builds - with customers, drivers, employees and transport partners across every route we serve.",
-      "Our journey forward is about expanding our reach while maintaining the trust and personal attention that have shaped Saibaba Transport from the beginning.",
+      "Our journey forward is about expanding our reach while maintaining the trust and personal attention that have shaped Sai Baba Transport from the beginning.",
       "We look forward to strengthening our network, improving our capabilities and creating long-term partnerships with businesses across India.",
     ],
   },
@@ -120,9 +120,9 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Saibaba Transport"
+        eyebrow="About Sai Baba Transport"
         title="A transportation partner built on trust and reach"
-        description="From our roots in textile transportation to a growing pan-India network - here's the story, philosophy and capability behind Saibaba Transport."
+        description="From our roots in textile transportation to a growing pan-India network - here's the story, philosophy and capability behind Sai Baba Transport."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
       />
 
@@ -136,7 +136,7 @@ export default function AboutPage() {
               Reliable movement, backed by real transportation experience
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              Saibaba Transport is a pan-India multimodal transportation and
+              Sai Baba Transport is a pan-India multimodal transportation and
               logistics company built around one idea: businesses need a
               transport partner they can rely on without having to
               double-check every shipment. What began as a dedicated textile
@@ -253,7 +253,7 @@ export default function AboutPage() {
           <SectionHeading
             align="center"
             eyebrow="Our Leadership"
-            title="The people behind Saibaba Transport"
+            title="The people behind Sai Baba Transport"
             description="A leadership team focused on reliable transportation, strong partnerships and long-term business relationships."
             className="mx-auto"
           />
@@ -312,7 +312,7 @@ export default function AboutPage() {
             align="center"
             eyebrow="Leadership Messages"
             title="A few words from our leadership"
-            description="The people behind Saibaba Transport share what reliability, partnership and growth mean to them."
+            description="The people behind Sai Baba Transport share what reliability, partnership and growth mean to them."
             className="mx-auto"
           />
 
@@ -388,7 +388,7 @@ export default function AboutPage() {
                           {person.name}
                         </p>
                         <p className="text-sm text-white/45">
-                          {person.role}, Saibaba Transport
+                          {person.role}, Sai Baba Transport
                         </p>
                       </div>
                     </div>
