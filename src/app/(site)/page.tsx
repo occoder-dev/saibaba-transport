@@ -137,16 +137,16 @@ export default async function Home() {
             exactly half its width, pinned to the right, on large screens. */}
         <Reveal
           delay={0.15}
-          className="relative mx-4 mt-12 h-64 overflow-hidden rounded-3xl shadow-xl sm:mx-6 sm:h-80 lg:absolute lg:inset-y-0 lg:right-0 lg:mx-0 lg:mt-0 lg:h-full lg:w-1/2 lg:rounded-none lg:shadow-none"
+          className="relative mx-4 mt-12 overflow-hidden rounded-3xl shadow-xl sm:mx-6 lg:absolute lg:inset-y-0 lg:right-0 lg:mx-0 lg:mt-0 lg:h-full lg:w-1/2 lg:rounded-none lg:shadow-none"
         >
           <Image
             src="/images/textile-transportation.png"
             alt="Sai Baba Transport textile transportation"
-            fill
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
+            width={1200}
+            height={800}
+            className="block h-auto w-full lg:h-full lg:w-full lg:object-cover object-left"
           />
-          {/* Soften the seam against the section's accent background on large screens */}
+
           <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-24 bg-gradient-to-r from-accent/70 to-transparent lg:block" />
         </Reveal>
       </section>

@@ -9,11 +9,23 @@ import { stats } from "@/lib/data";
 export function Hero() {
   return (
     <section className="relative flex min-h-[640px] items-center overflow-hidden bg-brand-charcoal pt-24 pb-16 text-white sm:min-h-[85vh] sm:pt-28 sm:pb-20 lg:min-h-[92vh]">
-      {/* Ops-room texture: a faint grid across the whole hero */}
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-[0.05]" />
-      <div className="c5-photo"></div>
-      <div className="c5-grid-overlay"></div>
-      <div className="c5-scrim"></div>
+
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/images/sai-baba-hero.png')",
+        }}
+      />
+
+      {/* Dark left-to-right gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-black/20" />
+
+      {/* Bottom darkening */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
+
+      {/* Existing grid */}
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-[0.04] z-50" />
       {/* The network itself is the visual, anchored to the right - no stock
           photo. A live route pulses between our real branch cities. */}
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-full sm:block sm:w-[68%] lg:w-[58%]">
