@@ -24,6 +24,7 @@ export const enquiryTypeEnum = pgEnum("enquiry_type", [
   "TRANSPORTER",
   "CONTACT",
   "CAREER",
+  "REGISTRATION",
 ]);
 
 export const enquiryStatusEnum = pgEnum("enquiry_status", [

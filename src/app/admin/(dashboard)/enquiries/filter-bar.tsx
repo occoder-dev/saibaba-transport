@@ -19,6 +19,7 @@ const TYPE_OPTIONS: { value: EnquiryType | "ALL"; label: string }[] = [
   { value: "TRANSPORTER", label: "Transporter Registration" },
   { value: "CONTACT", label: "Contact Message" },
   { value: "CAREER", label: "Career Application" },
+  { value: "REGISTRATION", label: "Customer Registration" },
 ];
 
 export function FilterBar({ status, type }: { status: string; type: string }) {

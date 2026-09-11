@@ -14,6 +14,7 @@ const TYPE_LABEL: Record<EnquiryType, string> = {
   TRANSPORTER: "Transporter Registration",
   CONTACT: "Contact Message",
   CAREER: "Career Application",
+  REGISTRATION: "Customer Registration",
 };
 
 const STATUS_VARIANT: Record<EnquiryStatus, "default" | "secondary" | "outline"> = {
@@ -24,7 +25,7 @@ const STATUS_VARIANT: Record<EnquiryStatus, "default" | "secondary" | "outline">
 };
 
 const VALID_STATUSES: EnquiryStatus[] = ["NEW", "IN_PROGRESS", "RESOLVED", "CLOSED"];
-const VALID_TYPES: EnquiryType[] = ["QUOTE", "PARTNER", "TRANSPORTER", "CONTACT", "CAREER"];
+const VALID_TYPES: EnquiryType[] = ["QUOTE", "PARTNER", "TRANSPORTER", "CONTACT", "CAREER", "REGISTRATION"];
 
 function firstPayloadValue(payload: Record<string, string>, keys: string[]): string | undefined {
   for (const key of keys) {
@@ -48,8 +49,8 @@ export default async function AdminEnquiriesPage({ searchParams }: PageProps<"/a
       <div>
         <h1 className="text-2xl font-semibold text-brand-charcoal">Enquiries & Support</h1>
         <p className="text-sm text-muted-foreground">
-          All quote requests, partner enquiries, transporter signups, contact messages and career applications from
-          the website.
+          All quote requests, partner enquiries, transporter signups, customer registrations, contact messages and
+          career applications from the website.
         </p>
       </div>
 
@@ -68,7 +69,13 @@ export default async function AdminEnquiriesPage({ searchParams }: PageProps<"/a
           </TableHeader>
           <TableBody>
             {enquiries.map((enquiry) => {
-              const name = firstPayloadValue(enquiry.payload, ["name", "fullName", "contactName", "companyName"]);
+              const name = firstPayloadValue(enquiry.payload, [
+                "name",
+                "fullName",
+                "contactName",
+                "companyName",
+                "firmName",
+              ]);
               const contact = firstPayloadValue(enquiry.payload, ["phone", "mobile", "email"]);
               return (
                 <TableRow key={enquiry.id}>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Menu, Phone, LogIn, Search } from "lucide-react";
+import { ChevronDown, Menu, Phone, LogIn, Search, UserPlus } from "lucide-react";
 
 import { navLinks, siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -133,6 +133,17 @@ export function Navbar() {
               Track Shipment
             </Link>
           </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            asChild
+            className={cn(!scrolled && "border-white/30 bg-white/5 text-white hover:bg-white/10 hover:text-white")}
+          >
+            <Link href="/register">
+              <UserPlus className="size-4" />
+              Register
+            </Link>
+          </Button>
           <Button size="sm" asChild className="group">
             <Link href="/estimate">
               <Phone className="size-4" />
@@ -187,6 +198,11 @@ export function Navbar() {
                 <Button variant="outline" asChild>
                   <Link href="/track">
                     <Search className="size-4" /> Track Shipment
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link href="/register">
+                    <UserPlus className="size-4" /> Customer Registration
                   </Link>
                 </Button>
                 <Button variant="outline" asChild>

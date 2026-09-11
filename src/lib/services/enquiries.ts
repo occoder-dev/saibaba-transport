@@ -59,7 +59,14 @@ export async function getEnquiryCounts(): Promise<{
 }> {
   const all = await db.select().from(enquiries);
   const byStatus: Record<EnquiryStatus, number> = { NEW: 0, IN_PROGRESS: 0, RESOLVED: 0, CLOSED: 0 };
-  const byType: Record<EnquiryType, number> = { QUOTE: 0, PARTNER: 0, TRANSPORTER: 0, CONTACT: 0, CAREER: 0 };
+  const byType: Record<EnquiryType, number> = {
+    QUOTE: 0,
+    PARTNER: 0,
+    TRANSPORTER: 0,
+    CONTACT: 0,
+    CAREER: 0,
+    REGISTRATION: 0,
+  };
 
   for (const row of all) {
     byStatus[row.status]++;

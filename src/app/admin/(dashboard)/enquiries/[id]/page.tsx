@@ -16,6 +16,7 @@ const TYPE_LABEL: Record<EnquiryType, string> = {
   TRANSPORTER: "Transporter Registration",
   CONTACT: "Contact Message",
   CAREER: "Career Application",
+  REGISTRATION: "Customer Registration",
 };
 
 function fieldLabel(key: string): string {

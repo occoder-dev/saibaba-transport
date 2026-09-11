@@ -7,6 +7,7 @@ import {
   Building2,
   Truck,
   Images,
+  UserPlus,
   ArrowUpRight,
 } from "lucide-react";
 import { getEnquiryCounts, listEnquiries, type EnquiryType } from "@/lib/services/enquiries";
@@ -29,6 +30,7 @@ const TYPE_LABEL: Record<EnquiryType, string> = {
   TRANSPORTER: "Transporter Registration",
   CONTACT: "Contact Message",
   CAREER: "Career Application",
+  REGISTRATION: "Customer Registration",
 };
 
 const STATUS_VARIANT: Record<string, "default" | "secondary" | "outline"> = {
@@ -86,8 +88,17 @@ export default async function AdminDashboardPage() {
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <StatCard label="Quote Requests" value={counts.byType.QUOTE} icon={Inbox} href="/admin/enquiries?type=QUOTE" />
+        <StatCard
+          label="Customer Registrations"
+          value={counts.byType.REGISTRATION}
+          icon={UserPlus}
+          href="/admin/enquiries?type=REGISTRATION"
+        />
         <StatCard label="Transporter Signups" value={counts.byType.TRANSPORTER} icon={Truck} href="/admin/enquiries?type=TRANSPORTER" />
         <StatCard label="Active Services" value={services.length} icon={Truck} href="/admin/services" accent="muted" />
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <StatCard label="Gallery Images" value={gallery.length} icon={Images} href="/admin/gallery" accent="muted" />
       </div>
 
@@ -108,7 +119,13 @@ export default async function AdminDashboardPage() {
           ) : (
             <div className="divide-y divide-border">
               {recent.map((enquiry) => {
-                const name = firstPayloadValue(enquiry.payload, ["name", "fullName", "contactName", "companyName"]);
+                const name = firstPayloadValue(enquiry.payload, [
+                  "name",
+                  "fullName",
+                  "contactName",
+                  "companyName",
+                  "firmName",
+                ]);
                 const contact = firstPayloadValue(enquiry.payload, ["phone", "mobile", "email"]);
                 return (
                   <Link
