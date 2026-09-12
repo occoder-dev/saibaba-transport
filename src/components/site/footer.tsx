@@ -170,7 +170,7 @@ export async function Footer() {
           <p className="text-xs text-white/40">
             Site by{" "}
             <a
-              href="#"
+              href="https://lunetron.com"
               className="text-white/60 hover:text-primary"
             >
               Lunetron Web Services
